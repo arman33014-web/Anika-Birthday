@@ -75,7 +75,14 @@ if (enterBtn) {
 
     enterBtn.addEventListener("click", () => {
 
-        bgMusic.play().catch(() => {});
+        bgMusic.volume = 0.7;
+bgMusic.currentTime = 0;
+
+bgMusic.play().then(() => {
+    console.log("Music started successfully 🎵");
+}).catch((error) => {
+    console.log("Music error:", error);
+});
 
         opening.classList.remove("active");
 
