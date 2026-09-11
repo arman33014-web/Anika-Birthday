@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>04.10 — For Anika</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- OPENING -->
+    <main id="opening" class="screen active">
+
+        <div class="stars"></div>
+
+        <div class="content">
+
+            <p class="small-text">
+                A little something, made just for you.
+            </p>
+
+            <h1>
+                A little world<br>
+                made for you.
+            </h1>
+
+            <p class="message">
+                There is a little world waiting for you.
+            </p>
+
+            <button id="enterBtn">
+                Enter My Surprise
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- UNLOCK -->
+    <main id="unlock" class="screen">
+
+        <div class="unlock-content">
+
+            <p class="small-text">
+                Just one little thing...
+            </p>
+
+            <h2>
+                This world is only<br>
+                for you.
+            </h2>
+
+            <p class="unlock-subtitle">
+                Unlock it to continue.
+            </p>
+
+            <div class="code-box">
+
+                <input maxlength="1" class="code-input" inputmode="numeric">
+                <input maxlength="1" class="code-input" inputmode="numeric">
+                <input maxlength="1" class="code-input" inputmode="numeric">
+                <input maxlength="1" class="code-input" inputmode="numeric">
+
+            </div>
+
+            <p id="codeMessage"></p>
+
+        </div>
+
+    </main>
+
+
+    <!-- BIRTHDAY WORLD -->
+    <main id="world" class="screen">
+
+        <div class="world-bg"></div>
+
+        <div class="world-content">
+
+            <p class="world-eyebrow">
+                WELCOME TO YOUR WORLD
+            </p>
+
+            <div class="date-mark">
+                <span>04</span>
+                <small>·</small>
+                <span>10</span>
+            </div>
+
+            <h2 class="world-title">
+                Made just<br>
+                for you.
+            </h2>
+
+            <p class="world-subtitle">
+                Take your time.<br>
+                There are little surprises waiting everywhere.
+            </p>
+
+
+            <div class="world-grid">
+
+                <button class="world-card" data-section="gifts">
+                    <span class="card-icon">✦</span>
+                    <span class="card-title">Gifts</span>
+                    <span class="card-text">
+                        Something special is waiting.
+                    </span>
+                </button>
+
+
+                <button class="world-card" data-section="letter">
+                    <span class="card-icon">♡</span>
+                    <span class="card-title">A Letter</span>
+                    <span class="card-text">
+                        Something I wanted to say.
+                    </span>
+                </button>
+
+
+                <button class="world-card" data-section="memories">
+                    <span class="card-icon">◌</span>
+                    <span class="card-title">Memories</span>
+                    <span class="card-text">
+                        Little moments worth keeping.
+                    </span>
+                </button>
+
+
+                <button class="world-card" data-section="game">
+                    <span class="card-icon">◇</span>
+                    <span class="card-title">A Little Game</span>
+                    <span class="card-text">
+                        Let's see if you can find it.
+                    </span>
+                </button>
+
+            </div>
+
+
+            <button class="final-card" data-section="final">
+
+                <span>✧</span>
+
+                <div>
+                    <strong>One Last Surprise</strong>
+                    <small>Save this one for the end.</small>
+                </div>
+
+                <span>→</span>
+
+            </button>
+
+        </div>
+
+    </main>
+
+    <!-- MEMORIES ROOM -->
+
+<main id="memoriesRoom" class="screen">
+
+    <div class="memories-background"></div>
+
+    <div class="memories-content">
+
+        <button id="backFromMemories" class="back-button">
+            ← Back
+        </button>
+
+        <p class="world-eyebrow">
+            CHAPTER THREE
+        </p>
+
+        <h2 class="memories-title">
+            Little moments.<br>
+            Worth keeping.
+        </h2>
+
+        <p class="memories-subtitle">
+            Some moments become memories<br>
+            simply because they mattered.
+        </p>
+
+
+        <!-- MEMORY CARDS -->
+
+        <div class="memory-card">
+
+    <div class="memory-video">
+        <video
+            src="assets/videos/Anika.mp4"
+            controls
+            playsinline>
+        </video>
+    </div>
+
+    <div class="memory-info">
+        <span class="memory-number">01</span>
+
+        <h3>The first one</h3>
+
+        <p>
+            Mujhe abhi bhi yaad hai jab maine tumse pehli baar
+            picture send karne ke liye bola tha, aur jab tumne
+            pehli baar ye video bheji thi na, sach mein mai bohot
+            zyada khush hua tha. 🥹❤️
+
+            Pata nahi kyun, but uss moment mein tum mujhe aur bhi
+            zyada cute lagi thi. Shayad isiliye ye chhoti si video
+            mere liye itni special ban gayi. ❤️
+        </p>
+    </div>
+
+</div>
+
+
+           <div class="memory-card">
+
+    <div class="memory-video">
+        <video
+            src="assets/videos/Anika2.mp4"
+            controls
+            playsinline>
+        </video>
+    </div>
+
+    <div class="memory-info">
+        <span class="memory-number">02</span>
+
+        <h3>A little moment</h3>
+
+        <p>
+            Ye video tumne mujhe kuch time pehle randomly bheji thi,
+            aur shayad tumhe idea bhi nahi hoga ki tumhe dekh kar
+            mujhe kitna accha laga tha. 🥹❤️
+            Tumne jis tarah dupatta odha hua tha na, uss moment mein
+            tum mujhe bohot hi zyada pyari lag rahi thi.
+        </p>
+    </div>
+
+</div>
+
+
+            <div class="memory-card">
+
+    <div class="memory-video">
+        <video
+            src="assets/videos/Anika3.mp4"
+            controls
+            playsinline>
+        </video>
+    </div>
+
+    <div class="memory-info">
+        <span class="memory-number">03</span>
+
+        <h3>Just for you</h3>
+
+        <p>
+            Ye video tumne mujhe uss waqt bheji thi jab mera tumhe
+            dekhne ka bohot mann kar raha tha. Maine tumse pics
+            bhejne ko bola tha, lekin tumne ye chhoti si snap bhej
+            di thi. 🥹❤️ Har baar ki tarah, iss baar bhi tum mujhe
+            bohot bohot zyada pyari lagi.
+
+            Uss waqt bas ek hi feeling aa rahi thi ki meri bandi
+            is duniya mein kitni zyada pyari hai… aur tumhe dekh
+            kar jo khushi mujhe hoti hai, shayad wo sirf mai hi
+            samajh sakta hoon. ❤️ Tum mere liye kitni special ho,
+            ye shayad mai kabhi properly words mein explain bhi
+            nahi kar paunga.
+
+            Bas itna jaanta hoon ki mai tumse bohot zyada pyaar
+            karta hoon, aur tumhari ye chhoti-chhoti snaps bhi
+            mere liye bohot special hain. 🫶❤️
+        </p>
+    </div>
+
+</div>
+
+        <div class="memories-footer">
+            <span>♡</span>
+            <p>More memories are waiting to be added.</p>
+            <span>♡</span>
+        </div>
+
+    </div>
+
+</main>
+<!-- ONE LAST SURPRISE -->
+
+<main id="finalRoom" class="screen">
+
+    <div class="final-background"></div>
+
+    <div class="final-content">
+
+        <button id="backFromFinal" class="back-button">
+            ← Back
+        </button>
+
+        <p class="world-eyebrow">
+            THE FINAL CHAPTER
+        </p>
+
+        <h2 class="final-title">
+            One Last<br>
+            Surprise.
+        </h2>
+
+        <p class="final-subtitle">
+            You made it this far...<br>
+            so save this one for the end.
+        </p>
+
+
+        <!-- VIDEO AREA -->
+
+        <div class="final-video-frame">
+
+            <div class="final-video-placeholder">
+
+                <span class="final-video-icon">✦</span>
+
+                <p>YOUR VIDEO WILL BE HERE</p>
+
+                <small>
+                    A little surprise is waiting...
+                </small>
+
+            </div>
+
+            <!--
+            BAAD MEIN VIDEO YAHAN ADD KARENGE
+
+            <video
+                src="assets/videos/final.mp4"
+                controls
+                playsinline>
+            </video>
+            -->
+
+        </div>
+
+
+        <!-- FINAL MESSAGE AREA -->
+
+        <div class="final-message">
+
+            <span class="final-heart">♡</span>
+
+            <p>
+                Some surprises are worth waiting for.
+            </p>
+
+            <small>
+                This little moment is still waiting to be made.
+            </small>
+
+        </div>
+
+
+        <div class="final-ending">
+
+            <span>✦</span>
+
+            <p>
+                Made with love, just for you.
+            </p>
+
+            <span>✦</span>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+    <!-- GIFTS ROOM -->
+
+    <main id="giftsRoom" class="screen">
+
+        <div class="gifts-background"></div>
+
+        <div class="gifts-content">
+
+            <button id="backToWorld" class="back-button">
+                ← Back
+            </button>
+
+            <p class="world-eyebrow">
+                CHAPTER ONE
+            </p>
+
+            <h2 class="gifts-title">
+                Three little<br>
+                surprises.
+            </h2>
+
+            <p class="gifts-subtitle">
+                Don't rush.<br>
+                Open them one at a time.
+            </p>
+
+
+            <!-- DUDU BUBU -->
+
+            <div class="dudu-frame">
+
+                <video
+                    class="dudu-video"
+                    src="assets/gifs/dudu.mp4"
+                    autoplay
+                    muted
+                    loop
+                    playsinline>
+                </video>
+
+            </div>
+
+
+            <!-- GIFTS -->
+
+            <div class="gift-grid">
+
+                <button class="gift-box" data-gift="1">
+
+                    <span class="gift-number">
+                        01
+                    </span>
+
+                    <div class="gift-emoji">
+                        🎁
+                    </div>
+
+                    <strong>
+                        First Surprise
+                    </strong>
+
+                    <small>
+                        Open me
+                    </small>
+
+                </button>
+
+
+                <button class="gift-box" data-gift="2">
+
+                    <span class="gift-number">
+                        02
+                    </span>
+
+                    <div class="gift-emoji">
+                        🎀
+                    </div>
+
+                    <strong>
+                        Second Surprise
+                    </strong>
+
+                    <small>
+                        Open me
+                    </small>
+
+                </button>
+
+
+                <button class="gift-box" data-gift="3">
+
+                    <span class="gift-number">
+                        03
+                    </span>
+
+                    <div class="gift-emoji">
+                        ✨
+                    </div>
+
+                    <strong>
+                        Final Gift
+                    </strong>
+
+                    <small>
+                        Open me
+                    </small>
+
+                </button>
+
+            </div>
+
+
+            <p id="giftProgress">
+                0 / 3 surprises opened
+            </p>
+
+
+            <div id="giftComplete">
+
+                <span>✦</span>
+
+                <p>
+                    You found all three.
+                </p>
+
+                <small>
+                    There's still more waiting for you...
+                </small>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- GIFT REVEAL -->
+
+    <div id="giftModal" class="gift-modal">
+
+        <div class="gift-modal-bg"></div>
+
+        <div class="gift-modal-box">
+
+            <button id="closeGift" class="close-btn">
+                ×
+            </button>
+
+            <div id="giftRevealContent"></div>
+
+        </div>
+
+    </div>
+<!-- BACKGROUND MUSIC -->
+
+<audio id="bgMusic" loop>
+    <source src="assets/music/Mere Naam Tu.mp3" type="audio/mpeg">
+</audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
