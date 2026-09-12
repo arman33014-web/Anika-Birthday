@@ -9662,3 +9662,20 @@ h2 {
     height: auto !important;
     display: block;
 }
+/* =========================================
+   🎁 GIFTS ROOM — DREAMY PINK BACKGROUND
+========================================= */
+
+#giftsRoom {
+    background:
+        linear-gradient(
+            rgba(45, 15, 35, 0.22),
+            rgba(35, 10, 30, 0.30)
+        ),
+        url("assets/backgrounds/gifts-bg.png")
+        center top / cover no-repeat !important;
+}
+
+#giftsRoom .gifts-background {
+    display: none !important;
+}
