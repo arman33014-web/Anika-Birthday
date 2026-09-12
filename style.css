@@ -9778,3 +9778,581 @@ h2 {
 #giftsRoom .gifts-background {
     display: none !important;
 }
+/* =========================================
+   🎁 GIFTS — CARD LAYOUT POLISH ONLY
+   Background untouched
+========================================= */
+
+/* Gift cards ko cleaner premium glass look */
+#giftsRoom .gift-grid {
+    gap: 22px !important;
+    margin-top: 34px !important;
+    align-items: stretch !important;
+}
+
+#giftsRoom .gift-box {
+    position: relative;
+    min-height: 255px !important;
+    padding: 34px 24px 26px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 26px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.13),
+            rgba(255,255,255,0.045)
+        ) !important;
+
+    border: 1px solid rgba(255, 150, 210, 0.28) !important;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,0.28),
+        inset 0 1px 0 rgba(255,255,255,0.12) !important;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease !important;
+}
+
+
+/* Soft shine inside card */
+#giftsRoom .gift-box::before {
+    content: "";
+    position: absolute;
+    top: -70%;
+    left: -35%;
+    width: 170%;
+    height: 100%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,190,225,0.16),
+            transparent 60%
+        );
+
+    pointer-events: none;
+}
+
+
+/* Top number */
+#giftsRoom .gift-number {
+    position: absolute !important;
+    top: 15px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    width: 42px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: rgba(255, 150, 205, 0.10);
+    border: 1px solid rgba(255, 180, 220, 0.22);
+
+    font-size: 10px !important;
+    letter-spacing: 3px !important;
+    font-weight: 600;
+
+    color: rgba(255,220,238,0.72) !important;
+}
+
+
+/* Gift emoji */
+#giftsRoom .gift-emoji {
+    font-size: 48px !important;
+    line-height: 1 !important;
+
+    margin: 18px 0 18px !important;
+
+    filter:
+        drop-shadow(0 8px 16px rgba(0,0,0,0.25))
+        drop-shadow(0 0 14px rgba(255,120,190,0.22));
+
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease !important;
+}
+
+
+/* Title */
+#giftsRoom .gift-box strong {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.2px;
+
+    color: #fff !important;
+
+    margin-bottom: 8px !important;
+}
+
+
+/* Open me */
+#giftsRoom .gift-box small {
+    font-size: 10px !important;
+    letter-spacing: 3px !important;
+    text-transform: uppercase;
+
+    color: rgba(255,175,215,0.75) !important;
+
+    transition: color 0.3s ease;
+}
+
+
+/* Hover */
+#giftsRoom .gift-box:hover {
+    transform: translateY(-8px) !important;
+
+    border-color: rgba(255,150,210,0.55) !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.17),
+            rgba(255,255,255,0.065)
+        ) !important;
+
+    box-shadow:
+        0 25px 55px rgba(0,0,0,0.34),
+        0 0 30px rgba(255,100,190,0.10),
+        inset 0 1px 0 rgba(255,255,255,0.18) !important;
+}
+
+
+#giftsRoom .gift-box:hover .gift-emoji {
+    transform: translateY(-5px) scale(1.08);
+    filter:
+        drop-shadow(0 10px 18px rgba(0,0,0,0.25))
+        drop-shadow(0 0 22px rgba(255,120,190,0.38));
+}
+
+
+#giftsRoom .gift-box:hover small {
+    color: #ffb0d5 !important;
+}
+
+
+/* Opened gift */
+#giftsRoom .gift-box.opened {
+    border-color: rgba(255,180,220,0.48) !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,180,220,0.13),
+            rgba(255,255,255,0.055)
+        ) !important;
+}
+
+
+/* Progress indicator */
+#giftsRoom #giftProgress {
+    margin-top: 26px !important;
+
+    padding: 9px 18px !important;
+
+    display: inline-block;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.055);
+
+    border: 1px solid rgba(255,180,220,0.18);
+
+    color: rgba(255,215,235,0.72) !important;
+
+    font-size: 10px !important;
+    letter-spacing: 1.5px !important;
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    #giftsRoom .gift-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+        width: 100% !important;
+        max-width: 390px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    #giftsRoom .gift-box {
+        min-height: 210px !important;
+        padding: 30px 20px 24px !important;
+        border-radius: 22px !important;
+    }
+
+    #giftsRoom .gift-emoji {
+        font-size: 42px !important;
+        margin: 16px 0 !important;
+    }
+
+    #giftsRoom .gift-box strong {
+        font-size: 17px !important;
+    }
+}
+/* =========================================
+   🎁 GIFTS — GENERATED DESIGN STYLE
+   Full card redesign — background untouched
+========================================= */
+
+#giftsRoom .gift-grid {
+    width: min(920px, 92%) !important;
+    margin: 42px auto 0 !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 22px !important;
+}
+
+
+/* CARD */
+#giftsRoom .gift-box {
+    position: relative !important;
+
+    min-height: 310px !important;
+    padding: 52px 24px 24px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    border-radius: 24px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 225, 240, 0.30),
+            rgba(150, 75, 120, 0.18)
+        ) !important;
+
+    border: 1px solid rgba(255, 190, 220, 0.55) !important;
+
+    box-shadow:
+        0 20px 45px rgba(35, 5, 25, 0.30),
+        inset 0 1px 0 rgba(255,255,255,0.28) !important;
+
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+
+    overflow: hidden !important;
+
+    transform: translateY(0);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease !important;
+}
+
+
+/* Soft light at top of cards */
+#giftsRoom .gift-box::before {
+    content: "" !important;
+
+    position: absolute !important;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 48%;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255,255,255,0.24),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* NUMBER BADGE */
+#giftsRoom .gift-number {
+    position: absolute !important;
+
+    top: -1px !important;
+    left: 50% !important;
+
+    transform: translateX(-50%) !important;
+
+    width: 68px !important;
+    height: 34px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 0 0 20px 20px !important;
+
+    background:
+        rgba(90, 25, 65, 0.32) !important;
+
+    border:
+        1px solid rgba(255, 190, 220, 0.45) !important;
+
+    border-top: none !important;
+
+    color: rgba(255, 235, 245, 0.82) !important;
+
+    font-size: 10px !important;
+    letter-spacing: 4px !important;
+    font-weight: 600 !important;
+
+    z-index: 4 !important;
+}
+
+
+/* BIG GIFT ICON */
+#giftsRoom .gift-emoji {
+    position: relative !important;
+    z-index: 2 !important;
+
+    font-size: 58px !important;
+    line-height: 1 !important;
+
+    margin: 20px 0 22px !important;
+
+    filter:
+        drop-shadow(0 10px 14px rgba(60,10,40,0.25))
+        drop-shadow(0 0 18px rgba(255,150,205,0.30)) !important;
+
+    transition: transform 0.35s ease !important;
+}
+
+
+/* TITLE */
+#giftsRoom .gift-box strong {
+    position: relative !important;
+    z-index: 2 !important;
+
+    display: block !important;
+
+    margin: 0 !important;
+
+    color: #fff7fb !important;
+
+    font-family: Georgia, "Times New Roman", serif !important;
+
+    font-size: 20px !important;
+    font-weight: 600 !important;
+
+    text-align: center !important;
+}
+
+
+/* DESCRIPTION */
+#giftsRoom .gift-box strong::after {
+    display: block;
+
+    margin-top: 9px;
+
+    max-width: 190px;
+
+    color: rgba(255, 240, 247, 0.82);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    font-weight: 400;
+
+    letter-spacing: 0;
+
+    text-align: center;
+}
+
+
+/* UNIQUE DESCRIPTIONS */
+#giftsRoom .gift-box:nth-child(1) strong::after {
+    content: "A little something to make you smile.";
+}
+
+#giftsRoom .gift-box:nth-child(2) strong::after {
+    content: "Some memories, just for you.";
+}
+
+#giftsRoom .gift-box:nth-child(3) strong::after {
+    content: "Because you deserve something truly special.";
+}
+
+
+/* OPEN ME BUTTON */
+#giftsRoom .gift-box small {
+    position: relative !important;
+    z-index: 3 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 155px !important;
+    height: 42px !important;
+
+    margin-top: auto !important;
+
+    border-radius: 30px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(220, 90, 155, 0.82),
+            rgba(155, 55, 115, 0.82)
+        ) !important;
+
+    border: 1px solid rgba(255, 190, 220, 0.55) !important;
+
+    box-shadow:
+        0 8px 22px rgba(90, 20, 60, 0.25),
+        inset 0 1px 0 rgba(255,255,255,0.25) !important;
+
+    color: transparent !important;
+
+    font-size: 0 !important;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease !important;
+}
+
+
+/* Actual button text */
+#giftsRoom .gift-box small::after {
+    content: "Open Me   →" !important;
+
+    color: #fff !important;
+
+    font-family: Arial, sans-serif !important;
+
+    font-size: 12px !important;
+    font-weight: 500 !important;
+
+    letter-spacing: 1.5px !important;
+}
+
+
+/* HOVER */
+#giftsRoom .gift-box:hover {
+    transform: translateY(-8px) !important;
+
+    border-color: rgba(255, 190, 220, 0.82) !important;
+
+    box-shadow:
+        0 28px 55px rgba(55, 8, 38, 0.35),
+        0 0 30px rgba(255, 130, 195, 0.16),
+        inset 0 1px 0 rgba(255,255,255,0.35) !important;
+}
+
+
+#giftsRoom .gift-box:hover .gift-emoji {
+    transform: translateY(-6px) scale(1.08) !important;
+}
+
+
+#giftsRoom .gift-box:hover small {
+    transform: translateY(-2px) !important;
+
+    box-shadow:
+        0 12px 28px rgba(90, 20, 60, 0.32),
+        0 0 18px rgba(255, 130, 195, 0.18) !important;
+}
+
+
+/* OPENED STATE */
+#giftsRoom .gift-box.opened {
+    border-color: rgba(255, 205, 230, 0.72) !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 205, 230, 0.30),
+            rgba(150, 75, 120, 0.20)
+        ) !important;
+}
+
+
+/* PROGRESS */
+#giftsRoom #giftProgress {
+    margin-top: 28px !important;
+
+    padding: 10px 20px !important;
+
+    border-radius: 30px !important;
+
+    background: rgba(80, 20, 60, 0.22) !important;
+
+    border: 1px solid rgba(255, 190, 220, 0.30) !important;
+
+    color: rgba(255, 235, 245, 0.80) !important;
+
+    font-size: 10px !important;
+
+    letter-spacing: 1.5px !important;
+
+    backdrop-filter: blur(10px) !important;
+}
+
+
+/* =========================================
+   📱 MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    #giftsRoom .gift-grid {
+        width: min(390px, 90%) !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 18px !important;
+
+        margin-top: 32px !important;
+    }
+
+    #giftsRoom .gift-box {
+        min-height: 285px !important;
+
+        padding: 48px 22px 22px !important;
+
+        border-radius: 22px !important;
+    }
+
+    #giftsRoom .gift-emoji {
+        font-size: 52px !important;
+
+        margin: 18px 0 18px !important;
+    }
+
+    #giftsRoom .gift-box strong {
+        font-size: 19px !important;
+    }
+
+    #giftsRoom .gift-box small {
+        width: 150px !important;
+        height: 40px !important;
+    }
+}
