@@ -9706,3 +9706,30 @@ h2 {
         z-index: 5;
     }
 }
+/* =========================================
+   📱 BIRTHDAY WORLD — FULL SCROLL BACKGROUND
+========================================= */
+
+#world {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    background:
+        linear-gradient(
+            rgba(8, 4, 10, 0.28),
+            rgba(8, 4, 10, 0.38)
+        ),
+        url("assets/backgrounds/birthday-bg.png")
+        center top / cover no-repeat !important;
+}
+
+/* Purane background layer ko hide kar do */
+#world .world-bg {
+    display: none !important;
+}
+
+/* Content ko transparent rakho */
+#world .world-content {
+    position: relative;
+    z-index: 2;
+    min-height: 100%;
+}
