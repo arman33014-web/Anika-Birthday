@@ -9733,3 +9733,31 @@ h2 {
     z-index: 2;
     min-height: 100%;
 }
+/* =========================================
+   📱 MEMORIES ROOM — FULL BACKGROUND FIX
+========================================= */
+
+#memoriesRoom {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+
+    background:
+        linear-gradient(
+            rgba(8, 4, 11, 0.48),
+            rgba(8, 4, 11, 0.62)
+        ),
+        url("assets/backgrounds/opening-bg.png")
+        center top / cover no-repeat !important;
+}
+
+/* Purana fixed background layer hide */
+#memoriesRoom .memories-background {
+    display: none !important;
+}
+
+/* Content upar rahe */
+#memoriesRoom .memories-content {
+    position: relative;
+    z-index: 2;
+    min-height: 100%;
+}
