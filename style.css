@@ -10356,3 +10356,198 @@ h2 {
         height: 40px !important;
     }
 }
+ =========================================
+   FINAL SURPRISE — FULL BACKGROUND FIX
+   Mobile + Desktop
+========================================= */
+
+#finalRoom {
+    position: fixed !important;
+    inset: 0 !important;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+
+    background: #08050b !important;
+}
+
+/* Background layer */
+#finalRoom .final-background {
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    min-height: 100% !important;
+
+    z-index: 0 !important;
+    pointer-events: none !important;
+
+    background-image:
+        linear-gradient(
+            rgba(5, 2, 8, 0.28),
+            rgba(5, 2, 8, 0.42)
+        ),
+        url("assets/backgrounds/final-bg.png") !important;
+
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Content image ke upar rahe */
+#finalRoom .final-content {
+    position: relative !important;
+    z-index: 5 !important;
+
+    width: min(92%, 850px) !important;
+
+    padding-top: 30px !important;
+    padding-bottom: 80px !important;
+}
+
+/* =========================================
+   MOBILE BACKGROUND
+========================================= */
+
+@media (max-width: 700px) {
+
+    #finalRoom {
+        min-height: 100dvh !important;
+    }
+
+    #finalRoom .final-background {
+        position: absolute !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        min-height: 100dvh !important;
+
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+
+    #finalRoom .final-content {
+        width: calc(100% - 30px) !important;
+
+        padding-top: 25px !important;
+        padding-bottom: 70px !important;
+    }
+}
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 420px) {
+
+    #finalRoom .final-background {
+        background-position: center center !important;
+    }
+
+    #finalRoom .final-content {
+        width: calc(100% - 24px) !important;
+    }
+}
+/* =========================================
+   🔥 FINAL ROOM — REAL FULL SCREEN BG FIX
+========================================= */
+
+/* Final room ko transform se free karo */
+#finalRoom,
+#finalRoom.active {
+    transform: none !important;
+    
+    position: fixed !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100dvh !important;
+
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+
+    align-items: flex-start !important;
+    justify-content: center !important;
+
+    background: #08050b !important;
+}
+
+/* REAL BACKGROUND */
+#finalRoom .final-background {
+    position: fixed !important;
+
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+
+    z-index: 0 !important;
+    pointer-events: none !important;
+
+    background-image:
+        linear-gradient(
+            rgba(5, 2, 8, 0.22),
+            rgba(5, 2, 8, 0.38)
+        ),
+        url("assets/backgrounds/final-bg.png") !important;
+
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+
+    background-attachment: fixed !important;
+}
+
+/* Content upar */
+#finalRoom .final-content {
+    position: relative !important;
+    z-index: 10 !important;
+
+    width: min(92%, 850px) !important;
+
+    padding-top: 30px !important;
+    padding-bottom: 100px !important;
+}
+
+/* =========================================
+   📱 MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    #finalRoom {
+        min-height: 100dvh !important;
+    }
+
+    #finalRoom .final-background {
+        width: 100vw !important;
+        height: 100dvh !important;
+
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-attachment: fixed !important;
+    }
+
+    #finalRoom .final-content {
+        width: calc(100% - 24px) !important;
+
+        padding-top: 22px !important;
+        padding-bottom: 90px !important;
+    }
+}
