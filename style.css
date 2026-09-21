@@ -10551,3 +10551,40 @@ h2 {
         padding-bottom: 90px !important;
     }
 }
+/* =========================================
+   📱 MOBILE — SHOW FULL BACKGROUND IMAGE
+========================================= */
+
+@media (max-width: 700px) {
+
+    /* BIRTHDAY WORLD */
+    #world .world-bg {
+        background-size: 100% 100% !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+
+
+    /* GIFTS ROOM */
+    #giftsRoom .gifts-background {
+        background-size: 100% 100% !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+
+
+    /* MEMORIES ROOM */
+    #memoriesRoom .memories-background {
+        background-size: 100% 100% !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+
+
+    /* FINAL SURPRISE */
+    #finalRoom .final-background {
+        background-size: 100% 100% !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+}
