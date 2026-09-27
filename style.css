@@ -10588,3 +10588,1378 @@ h2 {
         background-repeat: no-repeat !important;
     }
 }
+/* =========================================================
+   ✨ FINAL POLISH — PHASE 1
+   Mobile experience + touch polish
+   ========================================================= */
+
+/* ---------- GLOBAL TOUCH POLISH ---------- */
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a,
+input {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    touch-action: manipulation;
+}
+
+
+/* ---------- MOBILE SCREEN FOUNDATION ---------- */
+
+@media (max-width: 700px) {
+
+    html,
+    body {
+        width: 100%;
+        min-width: 100%;
+        overflow-x: hidden !important;
+    }
+
+    body {
+        overscroll-behavior-x: none;
+    }
+
+    .screen {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* ---------- WORLD ---------- */
+
+    #world {
+        padding: 0 14px;
+    }
+
+    #world .world-content {
+        width: 100%;
+        max-width: 520px;
+        padding: 42px 0 55px;
+    }
+
+    #world .world-title {
+        font-size: clamp(42px, 12vw, 58px);
+        line-height: 0.98;
+    }
+
+    #world .world-subtitle {
+        font-size: 13px;
+        line-height: 1.7;
+        max-width: 330px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* ---------- WORLD CARDS ---------- */
+
+    #world .world-grid {
+        width: 100%;
+        max-width: 430px;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin: 28px auto 0;
+    }
+
+    #world .world-card {
+        min-height: 145px;
+        padding: 20px 14px;
+        border-radius: 20px;
+    }
+
+    #world .world-card .card-icon {
+        font-size: 20px;
+        margin-bottom: 9px;
+    }
+
+    #world .world-card .card-title {
+        font-size: 16px;
+    }
+
+    #world .world-card .card-text {
+        font-size: 10px;
+        line-height: 1.45;
+        margin-top: 5px;
+    }
+
+
+    /* ---------- FINAL CARD ---------- */
+
+    #world .final-card {
+        width: 100%;
+        max-width: 430px;
+        min-height: 72px;
+        margin: 14px auto 0;
+        padding: 16px 18px;
+        border-radius: 20px;
+    }
+
+    #world .final-card strong {
+        font-size: 14px;
+    }
+
+    #world .final-card small {
+        font-size: 9px;
+        margin-top: 3px;
+    }
+
+
+    /* ---------- BACK BUTTON ---------- */
+
+    .back-button {
+        min-height: 42px;
+        padding: 10px 17px;
+        border-radius: 999px;
+    }
+
+
+    /* ---------- MEMORIES ---------- */
+
+    #memoriesRoom {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+
+    #memoriesRoom .memories-content {
+        width: 100%;
+        max-width: 520px;
+        padding: 35px 0 55px;
+    }
+
+    #memoriesRoom .memories-title {
+        font-size: clamp(38px, 11vw, 52px);
+        line-height: 1;
+    }
+
+    #memoriesRoom .memories-subtitle {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    #memoriesRoom .memory-grid {
+        width: 100%;
+        gap: 18px;
+    }
+
+    #memoriesRoom .memory-card {
+        width: 100%;
+        border-radius: 22px;
+        overflow: hidden;
+    }
+
+    #memoriesRoom .memory-video video {
+        width: 100%;
+        display: block;
+        border-radius: 0;
+    }
+
+    #memoriesRoom .memory-info {
+        padding: 20px 18px 22px;
+    }
+
+    #memoriesRoom .memory-info h3 {
+        font-size: 21px;
+    }
+
+    #memoriesRoom .memory-info p {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+
+    /* ---------- GIFTS ---------- */
+
+    #giftsRoom {
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+    }
+
+    #giftsRoom .gifts-content {
+        width: min(92%, 520px) !important;
+        padding: 42px 0 60px !important;
+    }
+
+    #giftsRoom .gifts-title {
+        font-size: clamp(40px, 11vw, 55px) !important;
+        line-height: 1 !important;
+    }
+
+    #giftsRoom .gifts-subtitle {
+        font-size: 12px !important;
+        line-height: 1.7 !important;
+    }
+
+    #giftsRoom .dudu-frame {
+        width: min(100%, 360px);
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 22px;
+        overflow: hidden;
+    }
+
+    #giftsRoom .dudu-video {
+        width: 100%;
+        display: block;
+    }
+
+    #giftsRoom .gift-grid {
+        width: 100% !important;
+        max-width: 390px !important;
+    }
+
+    #giftsRoom .gift-box {
+        width: 100%;
+        min-height: 250px !important;
+    }
+
+
+    /* ---------- GIFT MODAL ---------- */
+
+    #giftModal {
+        padding: 14px !important;
+    }
+
+    #giftModal .gift-modal-box {
+        width: min(100%, 520px) !important;
+        max-height: 88dvh !important;
+        border-radius: 24px !important;
+        overflow-y: auto !important;
+        overscroll-behavior: contain;
+    }
+
+    #giftModal .close-btn {
+        width: 38px;
+        height: 38px;
+        top: 12px;
+        right: 12px;
+    }
+
+
+    /* ---------- FINAL ROOM ---------- */
+
+    #finalRoom {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    #finalRoom .final-content {
+        width: 100%;
+        max-width: 520px;
+        padding: 35px 0 65px;
+    }
+
+    #finalRoom .final-title {
+        font-size: clamp(42px, 12vw, 62px);
+        line-height: 0.98;
+    }
+
+    #finalRoom .final-subtitle {
+        font-size: 13px;
+        line-height: 1.7;
+        margin-bottom: 28px;
+    }
+
+    #finalRoom .final-video-frame {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    #finalRoom .final-message {
+        margin-top: 22px;
+        padding: 20px 17px;
+        border-radius: 20px;
+    }
+
+
+    /* ---------- DISABLE HOVER LIFT ON TOUCH ---------- */
+
+    #giftsRoom .gift-box:hover,
+    #giftsRoom .dudu-frame:hover,
+    #world .world-card:hover,
+    #world .final-card:hover {
+        transform: none;
+    }
+
+
+    /* ---------- REAL TOUCH FEEDBACK ---------- */
+
+    #world .world-card:active,
+    #world .final-card:active,
+    #giftsRoom .gift-box:active,
+    .back-button:active {
+        transform: scale(0.97) !important;
+        transition: transform 0.12s ease;
+    }
+
+}
+
+
+/* =========================================================
+   📱 VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    #world .world-grid {
+        gap: 9px;
+    }
+
+    #world .world-card {
+        min-height: 135px;
+        padding: 17px 10px;
+    }
+
+    #world .world-card .card-title {
+        font-size: 14px;
+    }
+
+    #world .world-card .card-text {
+        font-size: 9px;
+    }
+
+    #giftsRoom .gift-box {
+        min-height: 235px !important;
+    }
+
+    #memoriesRoom .memory-info p {
+        font-size: 12px;
+    }
+
+}
+/* =========================================================
+   ✨ PHASE 2 — PREMIUM ANIMATIONS & TRANSITIONS
+   ========================================================= */
+
+/* ---------- SMOOTH SCREEN ENTRY ---------- */
+
+.screen.active .world-content,
+.screen.active .gifts-content,
+.screen.active .memories-content,
+.screen.active .final-content,
+.screen.active .unlock-content,
+.screen.active #opening .content {
+    animation: premiumContentReveal 0.9s cubic-bezier(.22,1,.36,1) both;
+}
+
+@keyframes premiumContentReveal {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- WORLD CARDS ---------- */
+
+#world.active .world-card {
+    animation: cardReveal 0.7s cubic-bezier(.22,1,.36,1) both;
+}
+
+#world.active .world-card:nth-child(1) {
+    animation-delay: 0.12s;
+}
+
+#world.active .world-card:nth-child(2) {
+    animation-delay: 0.20s;
+}
+
+#world.active .world-card:nth-child(3) {
+    animation-delay: 0.28s;
+}
+
+#world.active .world-card:nth-child(4) {
+    animation-delay: 0.36s;
+}
+
+#world.active .final-card {
+    animation: cardReveal 0.75s cubic-bezier(.22,1,.36,1) 0.48s both;
+}
+
+@keyframes cardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(22px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* ---------- WORLD CARD HOVER ---------- */
+
+@media (hover: hover) {
+
+    #world .world-card {
+        transition:
+            transform 0.35s cubic-bezier(.22,1,.36,1),
+            border-color 0.35s ease,
+            box-shadow 0.35s ease,
+            background 0.35s ease;
+    }
+
+    #world .world-card:hover {
+        transform: translateY(-6px);
+    }
+
+    #world .final-card {
+        transition:
+            transform 0.35s cubic-bezier(.22,1,.36,1),
+            border-color 0.35s ease,
+            box-shadow 0.35s ease;
+    }
+
+    #world .final-card:hover {
+        transform: translateY(-5px);
+    }
+
+}
+
+
+/* ---------- GIFT CARDS ---------- */
+
+#giftsRoom.active .gift-box {
+    animation: giftReveal 0.7s cubic-bezier(.22,1,.36,1) both;
+}
+
+#giftsRoom.active .gift-box:nth-child(1) {
+    animation-delay: 0.12s;
+}
+
+#giftsRoom.active .gift-box:nth-child(2) {
+    animation-delay: 0.22s;
+}
+
+#giftsRoom.active .gift-box:nth-child(3) {
+    animation-delay: 0.32s;
+}
+
+@keyframes giftReveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* ---------- DUDU VIDEO SOFT FLOAT ---------- */
+
+#giftsRoom.active .dudu-frame {
+    animation: duduFloat 5s ease-in-out infinite;
+}
+
+@keyframes duduFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+}
+
+
+/* ---------- MEMORIES ---------- */
+
+#memoriesRoom.active .memory-card {
+    animation: memoryReveal 0.75s cubic-bezier(.22,1,.36,1) both;
+}
+
+#memoriesRoom.active .memory-card:nth-child(1) {
+    animation-delay: 0.10s;
+}
+
+#memoriesRoom.active .memory-card:nth-child(2) {
+    animation-delay: 0.20s;
+}
+
+#memoriesRoom.active .memory-card:nth-child(3) {
+    animation-delay: 0.30s;
+}
+
+@keyframes memoryReveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- FINAL ROOM ---------- */
+
+#finalRoom.active .final-video-frame {
+    animation: finalReveal 1s cubic-bezier(.22,1,.36,1) 0.2s both;
+}
+
+#finalRoom.active .final-message {
+    animation: finalReveal 0.9s cubic-bezier(.22,1,.36,1) 0.45s both;
+}
+
+#finalRoom.active .final-ending {
+    animation: finalReveal 0.9s cubic-bezier(.22,1,.36,1) 0.65s both;
+}
+
+@keyframes finalReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- BACK BUTTON ---------- */
+
+.back-button {
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+@media (hover: hover) {
+
+    .back-button:hover {
+        transform: translateX(-4px);
+    }
+
+}
+
+.back-button:active {
+    transform: scale(0.95) !important;
+}
+
+
+/* ---------- GIFT MODAL ---------- */
+
+#giftModal.active .gift-modal-box {
+    animation: modalPop 0.45s cubic-bezier(.22,1,.36,1) both;
+}
+
+@keyframes modalPop {
+    from {
+        opacity: 0;
+        transform: scale(0.92) translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+/* ---------- SUBTLE TEXT GLOW ---------- */
+
+.world-title,
+.gifts-title,
+.memories-title,
+.final-title {
+    animation: titleGlow 4s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+
+    0%,
+    100% {
+        text-shadow:
+            0 3px 12px rgba(0, 0, 0, 0.7);
+    }
+
+    50% {
+        text-shadow:
+            0 3px 15px rgba(0, 0, 0, 0.75),
+            0 0 28px rgba(255, 170, 210, 0.13);
+    }
+
+}
+
+
+/* ---------- REDUCE MOTION ACCESSIBILITY ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+/* =========================================================
+   ✨ PHASE 3 — VISUAL CONSISTENCY + PREMIUM DETAILS
+   ========================================================= */
+
+
+/* ---------- COMMON EYEBROW ---------- */
+
+.world-eyebrow {
+    opacity: 0.9;
+    letter-spacing: 3px;
+    font-size: 10px;
+    transition:
+        opacity 0.3s ease,
+        letter-spacing 0.3s ease;
+}
+
+.screen.active .world-eyebrow {
+    animation: eyebrowReveal 0.8s ease both;
+}
+
+@keyframes eyebrowReveal {
+    from {
+        opacity: 0;
+        letter-spacing: 7px;
+    }
+
+    to {
+        opacity: 0.9;
+        letter-spacing: 3px;
+    }
+}
+
+
+/* ---------- DATE MARK ---------- */
+
+.date-mark {
+    position: relative;
+    transition: transform 0.4s ease;
+}
+
+.screen.active .date-mark {
+    animation: dateReveal 0.8s cubic-bezier(.22,1,.36,1) 0.08s both;
+}
+
+@keyframes dateReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* ---------- UNIVERSAL PREMIUM BUTTON FEEL ---------- */
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+button:focus-visible {
+    outline: 2px solid rgba(255, 190, 220, 0.75);
+    outline-offset: 4px;
+}
+
+
+/* ---------- WORLD CARD GLASS DEPTH ---------- */
+
+#world .world-card,
+#world .final-card {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+#world .world-card::before,
+#world .final-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.07),
+            transparent 42%
+        );
+
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+@media (hover: hover) {
+
+    #world .world-card:hover::before,
+    #world .final-card:hover::before {
+        opacity: 1;
+    }
+
+}
+
+
+/* ---------- WORLD CARD ICON ---------- */
+
+#world .card-icon {
+    transition:
+        transform 0.35s ease,
+        text-shadow 0.35s ease;
+}
+
+@media (hover: hover) {
+
+    #world .world-card:hover .card-icon {
+        transform: translateY(-2px) scale(1.08);
+        text-shadow:
+            0 0 18px rgba(255, 190, 220, 0.35);
+    }
+
+}
+
+
+/* ---------- GIFT CARD DEPTH ---------- */
+
+#giftsRoom .gift-box {
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.20),
+        inset 0 1px 0 rgba(255,255,255,0.08);
+
+    transition:
+        transform 0.35s cubic-bezier(.22,1,.36,1),
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+@media (hover: hover) {
+
+    #giftsRoom .gift-box:hover {
+        box-shadow:
+            0 22px 55px rgba(0, 0, 0, 0.30),
+            0 0 28px rgba(255, 180, 215, 0.10),
+            inset 0 1px 0 rgba(255,255,255,0.10);
+    }
+
+}
+
+
+/* ---------- GIFT EMOJI ---------- */
+
+#giftsRoom .gift-emoji {
+    transition:
+        transform 0.4s cubic-bezier(.22,1,.36,1),
+        filter 0.4s ease;
+}
+
+@media (hover: hover) {
+
+    #giftsRoom .gift-box:hover .gift-emoji {
+        transform: translateY(-5px) scale(1.08);
+        filter:
+            drop-shadow(0 0 12px rgba(255,190,220,0.25));
+    }
+
+}
+
+
+/* ---------- DUDU FRAME ---------- */
+
+#giftsRoom .dudu-frame {
+    border: 1px solid rgba(255,255,255,0.10);
+
+    box-shadow:
+        0 20px 55px rgba(0,0,0,0.28),
+        0 0 30px rgba(255,180,215,0.08);
+}
+
+
+/* ---------- MEMORY CARDS ---------- */
+
+#memoriesRoom .memory-card {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,0.22),
+        inset 0 1px 0 rgba(255,255,255,0.07);
+
+    transition:
+        transform 0.35s cubic-bezier(.22,1,.36,1),
+        box-shadow 0.35s ease;
+}
+
+@media (hover: hover) {
+
+    #memoriesRoom .memory-card:hover {
+        transform: translateY(-5px);
+
+        box-shadow:
+            0 25px 55px rgba(0,0,0,0.30),
+            0 0 28px rgba(255,170,210,0.08);
+    }
+
+}
+
+
+/* ---------- MEMORY VIDEO ---------- */
+
+#memoriesRoom .memory-video {
+    overflow: hidden;
+}
+
+#memoriesRoom .memory-video video {
+    transition: transform 0.6s cubic-bezier(.22,1,.36,1);
+}
+
+@media (hover: hover) {
+
+    #memoriesRoom .memory-card:hover .memory-video video {
+        transform: scale(1.025);
+    }
+
+}
+
+
+/* ---------- FINAL VIDEO ---------- */
+
+#finalRoom .final-video-frame {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 25px 65px rgba(0,0,0,0.30),
+        0 0 35px rgba(255,170,210,0.08);
+}
+
+
+/* ---------- FINAL MESSAGE ---------- */
+
+#finalRoom .final-message {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,0.20),
+        inset 0 1px 0 rgba(255,255,255,0.07);
+}
+
+
+/* ---------- FINAL HEART ---------- */
+
+#finalRoom .final-heart {
+    display: inline-block;
+    animation: heartSoftPulse 3s ease-in-out infinite;
+}
+
+@keyframes heartSoftPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.75;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+
+}
+
+
+/* ---------- SUBTLE FOOTER SPARKLE ---------- */
+
+#finalRoom .final-ending span {
+    animation: sparklePulse 3s ease-in-out infinite;
+}
+
+#finalRoom .final-ending span:last-child {
+    animation-delay: 1.5s;
+}
+
+@keyframes sparklePulse {
+
+    0%,
+    100% {
+        opacity: 0.45;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.12);
+    }
+
+}
+
+
+/* ---------- MODAL PREMIUM DEPTH ---------- */
+
+#giftModal .gift-modal-box {
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 30px 90px rgba(0,0,0,0.45),
+        0 0 45px rgba(255,170,215,0.10),
+        inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+
+/* ---------- CLOSE BUTTON ---------- */
+
+#giftModal .close-btn {
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+@media (hover: hover) {
+
+    #giftModal .close-btn:hover {
+        transform: rotate(90deg) scale(1.05);
+    }
+
+}
+
+#giftModal .close-btn:active {
+    transform: scale(0.9);
+}
+
+
+/* =========================================================
+   📱 MOBILE — KEEP EVERYTHING CLEAN
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    #world .world-card,
+    #world .final-card,
+    #giftsRoom .gift-box,
+    #memoriesRoom .memory-card,
+    #finalRoom .final-message {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+
+    #world .world-card::before,
+    #world .final-card::before {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   🌙 PERFORMANCE
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .world-eyebrow,
+    .date-mark,
+    .world-title,
+    .gifts-title,
+    .memories-title,
+    .final-title,
+    .final-heart,
+    .final-ending span {
+        animation: none !important;
+    }
+
+}
+/* =========================================================
+   ✨ PHASE 4 — INTERACTION POLISH
+   Music excluded
+   ========================================================= */
+
+
+/* ---------- PREMIUM SCROLLBAR ---------- */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color:
+        rgba(255, 170, 210, 0.45)
+        rgba(255,255,255,0.04);
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.025);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        180deg,
+        rgba(255,190,220,0.55),
+        rgba(190,140,200,0.38)
+    );
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+        180deg,
+        rgba(255,205,230,0.75),
+        rgba(210,160,215,0.55)
+    );
+}
+
+
+/* ---------- TEXT SELECTION ---------- */
+
+::selection {
+    background: rgba(255,150,200,0.28);
+    color: #ffffff;
+}
+
+
+/* ---------- ALL CLICKABLE ELEMENTS ---------- */
+
+button {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+
+/* ---------- BUTTON PRESS FEEDBACK ---------- */
+
+button:active {
+    transition:
+        transform 0.1s ease,
+        filter 0.1s ease !important;
+}
+
+
+/* ---------- WORLD INTERACTION ---------- */
+
+#world .world-card,
+#world .final-card {
+    overflow: hidden;
+}
+
+#world .world-card::after,
+#world .final-card::after {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    left: 50%;
+    top: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(255,255,255,0.12),
+        transparent 68%
+    );
+
+    transform:
+        translate(-50%, -50%)
+        scale(0);
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition:
+        transform 0.45s ease,
+        opacity 0.45s ease;
+}
+
+#world .world-card:active::after,
+#world .final-card:active::after {
+    transform:
+        translate(-50%, -50%)
+        scale(2.2);
+
+    opacity: 1;
+}
+
+
+/* ---------- GIFT INTERACTION ---------- */
+
+#giftsRoom .gift-box {
+    overflow: hidden;
+}
+
+#giftsRoom .gift-box::before {
+    content: "";
+
+    position: absolute;
+    width: 180px;
+    height: 180px;
+
+    left: 50%;
+    top: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(255,255,255,0.13),
+        transparent 68%
+    );
+
+    transform:
+        translate(-50%, -50%)
+        scale(0);
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+#giftsRoom .gift-box:active::before {
+    transform:
+        translate(-50%, -50%)
+        scale(2);
+
+    opacity: 1;
+}
+
+
+/* ---------- OPENED GIFT FEEDBACK ---------- */
+
+#giftsRoom .gift-box.opened {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+#giftsRoom .gift-box.opened .gift-emoji {
+    animation: openedGiftPulse 0.7s ease;
+}
+
+@keyframes openedGiftPulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.18);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* ---------- VIDEO POLISH ---------- */
+
+video {
+    max-width: 100%;
+}
+
+video:focus {
+    outline: none;
+}
+
+#memoriesRoom video {
+    background: #050309;
+}
+
+
+/* ---------- MEMORY CARD TAP ---------- */
+
+#memoriesRoom .memory-card {
+    cursor: default;
+}
+
+#memoriesRoom .memory-card:active {
+    transform: scale(0.995);
+}
+
+
+/* ---------- MODAL BACKDROP ---------- */
+
+#giftModal .gift-modal-bg {
+    transition:
+        opacity 0.45s ease,
+        backdrop-filter 0.45s ease;
+}
+
+
+/* ---------- CLOSE BUTTON TAP ---------- */
+
+#giftModal .close-btn {
+    overflow: hidden;
+    position: relative;
+}
+
+#giftModal .close-btn::after {
+    content: "";
+
+    position: absolute;
+    width: 70px;
+    height: 70px;
+
+    left: 50%;
+    top: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(255,255,255,0.18),
+        transparent 68%
+    );
+
+    transform:
+        translate(-50%, -50%)
+        scale(0);
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+}
+
+#giftModal .close-btn:active::after {
+    transform:
+        translate(-50%, -50%)
+        scale(1.8);
+
+    opacity: 1;
+}
+
+
+/* ---------- BACK BUTTON MICRO INTERACTION ---------- */
+
+.back-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.back-button::after {
+    content: "";
+
+    position: absolute;
+    width: 100px;
+    height: 100px;
+
+    left: 50%;
+    top: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(255,255,255,0.10),
+        transparent 68%
+    );
+
+    transform:
+        translate(-50%, -50%)
+        scale(0);
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+}
+
+.back-button:active::after {
+    transform:
+        translate(-50%, -50%)
+        scale(1.5);
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   📱 MOBILE TOUCH FEEL
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    #world .world-card,
+    #world .final-card,
+    #giftsRoom .gift-box,
+    .back-button,
+    #giftModal .close-btn {
+        cursor: pointer;
+    }
+
+    #world .world-card:active,
+    #world .final-card:active {
+        filter: brightness(1.08);
+    }
+
+    #giftsRoom .gift-box:active {
+        filter: brightness(1.08);
+    }
+
+}
+
+
+/* =========================================================
+   💻 DESKTOP CURSOR POLISH
+   ========================================================= */
+
+@media (hover: hover) {
+
+    #world .world-card,
+    #world .final-card,
+    #giftsRoom .gift-box,
+    .back-button,
+    #giftModal .close-btn {
+        cursor: pointer;
+    }
+
+}
+
+
+/* =========================================================
+   🌙 SAFER ANIMATION ON LOW-POWER DEVICES
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #world .world-card::after,
+    #world .final-card::after,
+    #giftsRoom .gift-box::before,
+    #giftModal .close-btn::after,
+    .back-button::after {
+        transition: none !important;
+    }
+
+}
