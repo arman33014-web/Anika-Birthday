@@ -12597,3 +12597,167 @@ video:focus {
             13px !important;
     }
 }
+/* =========================================
+   📱 FINAL SURPRISE — MOBILE LAYOUT FIX
+========================================= */
+
+@media (max-width: 700px) {
+
+    /* Final page */
+    #finalRoom,
+    #finalRoom.active {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+
+        transform: none !important;
+    }
+
+    /* Main content */
+    #finalRoom .final-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        padding: 25px 14px 80px !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+
+        box-sizing: border-box !important;
+    }
+
+    /* Heading */
+    #finalRoom .final-title {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        font-size: clamp(42px, 14vw, 58px) !important;
+        line-height: 0.98 !important;
+
+        text-align: center !important;
+        overflow-wrap: normal !important;
+        word-break: normal !important;
+    }
+
+    #finalRoom .final-subtitle {
+        width: 100% !important;
+        max-width: 340px !important;
+
+        text-align: center !important;
+
+        font-size: 14px !important;
+    }
+
+    /* VIDEO */
+    #finalRoom .final-video-frame {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        box-sizing: border-box !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    #finalRoom .final-video-placeholder {
+        width: 100% !important;
+        min-width: 0 !important;
+
+        min-height: 240px !important;
+
+        box-sizing: border-box !important;
+
+        overflow: hidden !important;
+    }
+
+    #finalRoom .final-video-frame video {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+
+        object-fit: contain !important;
+    }
+
+    /* FINAL MESSAGE */
+    #finalRoom .final-message {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        box-sizing: border-box !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        text-align: center !important;
+
+        overflow-wrap: break-word !important;
+    }
+
+    #finalRoom .final-message p,
+    #finalRoom .final-message small {
+        max-width: 100% !important;
+        overflow-wrap: break-word !important;
+    }
+
+    /* Ending */
+    #finalRoom .final-ending {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        box-sizing: border-box !important;
+
+        text-align: center !important;
+    }
+
+    /* Background */
+    #finalRoom .final-background {
+        position: fixed !important;
+
+        top: 0 !important;
+        left: 0 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        min-width: 0 !important;
+
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+
+        z-index: 0 !important;
+    }
+
+    /* Back button */
+    #finalRoom .back-button {
+        align-self: flex-start !important;
+        flex-shrink: 0 !important;
+    }
+}
+
+
+/* EXTRA SMALL PHONES */
+@media (max-width: 390px) {
+
+    #finalRoom .final-content {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    #finalRoom .final-title {
+        font-size: 40px !important;
+    }
+
+    #finalRoom .final-video-placeholder {
+        min-height: 210px !important;
+    }
+}
