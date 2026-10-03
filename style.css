@@ -11963,3 +11963,637 @@ video:focus {
     }
 
 }
+* =========================================================
+   📱 MOBILE PERFORMANCE MODE
+   Smoothness > unnecessary visual effects
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* ---------- STOP EXPENSIVE BLUR ---------- */
+
+    #world .world-card,
+    #world .final-card,
+    #giftsRoom .gift-box,
+    #memoriesRoom .memory-card,
+    #finalRoom .final-message,
+    #finalRoom .final-video-frame,
+    #giftModal .gift-modal-box,
+    #giftsRoom #giftProgress {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+
+
+    /* ---------- LIGHTER SHADOWS ---------- */
+
+    #world .world-card,
+    #world .final-card {
+        box-shadow:
+            0 8px 24px rgba(0,0,0,0.22) !important;
+    }
+
+    #giftsRoom .gift-box {
+        box-shadow:
+            0 10px 28px rgba(0,0,0,0.22) !important;
+    }
+
+    #memoriesRoom .memory-card {
+        box-shadow:
+            0 10px 28px rgba(0,0,0,0.22) !important;
+    }
+
+    #finalRoom .final-video-frame,
+    #finalRoom .final-message {
+        box-shadow:
+            0 10px 30px rgba(0,0,0,0.22) !important;
+    }
+
+
+    /* ---------- STOP CONTINUOUS TITLE GLOW ---------- */
+
+    .world-title,
+    .gifts-title,
+    .memories-title,
+    .final-title {
+        animation: none !important;
+    }
+
+
+    /* ---------- STOP DUDU FLOAT ---------- */
+
+    #giftsRoom.active .dudu-frame {
+        animation: none !important;
+    }
+
+
+    /* ---------- STOP HEART PULSE ---------- */
+
+    #finalRoom .final-heart {
+        animation: none !important;
+    }
+
+
+    /* ---------- STOP FOOTER SPARKLE LOOP ---------- */
+
+    #finalRoom .final-ending span {
+        animation: none !important;
+    }
+
+
+    /* ---------- REMOVE HOVER TRANSFORMS ---------- */
+
+    #world .world-card:hover,
+    #world .final-card:hover,
+    #giftsRoom .gift-box:hover,
+    #memoriesRoom .memory-card:hover {
+        transform: none !important;
+    }
+
+
+    /* ---------- MEMORY VIDEO ---------- */
+
+    #memoriesRoom .memory-video video {
+        transform: none !important;
+    }
+
+
+    /* ---------- REMOVE EXPENSIVE VIDEO SHADOWS ---------- */
+
+    #giftsRoom .dudu-frame {
+        box-shadow:
+            0 10px 28px rgba(0,0,0,0.24) !important;
+    }
+
+
+    /* ---------- GIFT EMOJI ---------- */
+
+    #giftsRoom .gift-emoji {
+        filter: none !important;
+    }
+
+
+    /* ---------- REMOVE DECORATIVE RIPPLE LAYERS ---------- */
+
+    #world .world-card::after,
+    #world .final-card::after,
+    #giftsRoom .gift-box::before,
+    #giftModal .close-btn::after,
+    .back-button::after {
+        display: none !important;
+    }
+
+
+    /* ---------- REDUCE MODAL EFFECT ---------- */
+
+    #giftModal .gift-modal-box {
+        box-shadow:
+            0 15px 45px rgba(0,0,0,0.40) !important;
+    }
+
+
+    /* ---------- GPU-FRIENDLY CONTENT ---------- */
+
+    #world .world-content,
+    #giftsRoom .gifts-content,
+    #memoriesRoom .memories-content,
+    #finalRoom .final-content {
+        transform: translateZ(0);
+    }
+
+
+    /* ---------- SMOOTHER SCROLL ---------- */
+
+    #world,
+    #giftsRoom,
+    #memoriesRoom,
+    #finalRoom {
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-y: contain;
+    }
+
+}
+
+
+/* =========================================================
+   📱 VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    #world .world-card,
+    #world .final-card,
+    #giftsRoom .gift-box,
+    #memoriesRoom .memory-card {
+        box-shadow:
+            0 7px 20px rgba(0,0,0,0.20) !important;
+    }
+
+}
+/* =========================================
+   🎥 FINAL BIRTHDAY VIDEO
+========================================= */
+
+.final-video-frame {
+    overflow: hidden !important;
+}
+
+.final-birthday-video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: inherit;
+    background: #000;
+    object-fit: contain;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .final-birthday-video {
+        width: 100%;
+        height: auto;
+        max-height: 75vh;
+    }
+
+}
+/* =========================================================
+   💖 FINAL ROOM — MOBILE CINEMATIC REDESIGN
+   ========================================================= */
+
+#finalRoom {
+    position: fixed !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100dvh !important;
+
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+
+    display: block !important;
+
+    background: #08050b !important;
+}
+
+
+/* ---------- BACKGROUND ---------- */
+
+#finalRoom .final-background {
+    position: fixed !important;
+    inset: 0 !important;
+
+    width: 100vw !important;
+    height: 100dvh !important;
+
+    z-index: 0 !important;
+    pointer-events: none !important;
+
+    background-image:
+        linear-gradient(
+            rgba(5, 2, 10, 0.18),
+            rgba(5, 2, 10, 0.34)
+        ),
+        url("assets/backgrounds/final-bg.png") !important;
+
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+
+/* ---------- CONTENT ---------- */
+
+#finalRoom .final-content {
+    position: relative !important;
+    z-index: 5 !important;
+
+    width: min(900px, calc(100% - 32px)) !important;
+
+    margin: 0 auto !important;
+
+    padding:
+        28px 0
+        70px !important;
+
+    text-align: center;
+}
+
+
+/* ---------- BACK BUTTON ---------- */
+
+#finalRoom .back-button {
+    display: inline-flex !important;
+
+    margin:
+        0 auto 55px
+        0 !important;
+
+    padding: 11px 20px !important;
+
+    border-radius: 999px !important;
+
+    background:
+        rgba(20, 8, 20, 0.58) !important;
+
+    border:
+        1px solid
+        rgba(255, 180, 220, 0.35) !important;
+
+    color:
+        rgba(255, 235, 245, 0.92) !important;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,0.20) !important;
+}
+
+
+/* ---------- EYEBROW ---------- */
+
+#finalRoom .world-eyebrow {
+    margin-bottom: 18px !important;
+
+    color:
+        rgba(255, 190, 220, 0.88) !important;
+
+    text-shadow:
+        0 0 20px
+        rgba(255, 100, 180, 0.30) !important;
+}
+
+
+/* ---------- TITLE ---------- */
+
+#finalRoom .final-title {
+    margin: 0 auto !important;
+
+    max-width: 760px !important;
+
+    color: #ffffff !important;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif !important;
+
+    font-size:
+        clamp(52px, 8vw, 92px) !important;
+
+    line-height:
+        0.92 !important;
+
+    letter-spacing:
+        -3px !important;
+
+    text-shadow:
+        0 8px 35px
+        rgba(0,0,0,0.65),
+
+        0 0 35px
+        rgba(255,100,190,0.12) !important;
+}
+
+
+/* ---------- SUBTITLE ---------- */
+
+#finalRoom .final-subtitle {
+    max-width: 600px !important;
+
+    margin:
+        26px auto 45px !important;
+
+    color:
+        rgba(255,235,245,0.84) !important;
+
+    font-size: 16px !important;
+
+    line-height: 1.75 !important;
+
+    text-shadow:
+        0 3px 12px
+        rgba(0,0,0,0.70) !important;
+}
+
+
+/* =========================================================
+   🎥 VIDEO
+   ========================================================= */
+
+#finalRoom .final-video-frame {
+    width: min(100%, 620px) !important;
+
+    margin:
+        0 auto !important;
+
+    padding: 8px !important;
+
+    border-radius: 26px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,150,210,0.25),
+            rgba(80,25,75,0.30)
+        ) !important;
+
+    border:
+        1px solid
+        rgba(255,190,225,0.28) !important;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,0.42),
+
+        0 0 45px
+        rgba(255,100,190,0.10) !important;
+
+    overflow: hidden !important;
+}
+
+
+/* Actual video */
+
+#finalRoom .final-birthday-video {
+    display: block !important;
+
+    width: 100% !important;
+
+    height: auto !important;
+
+    max-height: 78vh !important;
+
+    border-radius: 19px !important;
+
+    background: #000 !important;
+
+    object-fit: contain !important;
+}
+
+
+/* ---------- MESSAGE CARD ---------- */
+
+#finalRoom .final-message {
+    width: min(100%, 520px) !important;
+
+    margin:
+        35px auto 0 !important;
+
+    padding:
+        25px 22px !important;
+
+    border-radius: 24px !important;
+
+    background:
+        rgba(20, 8, 20, 0.52) !important;
+
+    border:
+        1px solid
+        rgba(255,190,220,0.20) !important;
+
+    box-shadow:
+        0 18px 50px
+        rgba(0,0,0,0.25) !important;
+
+    backdrop-filter:
+        blur(8px) !important;
+}
+
+
+#finalRoom .final-heart {
+    color:
+        #ff9dcc !important;
+
+    font-size: 30px !important;
+}
+
+
+#finalRoom .final-message p {
+    color:
+        rgba(255,245,250,0.94) !important;
+
+    font-family:
+        Georgia,
+        serif !important;
+
+    font-size: 18px !important;
+
+    line-height: 1.6 !important;
+}
+
+
+#finalRoom .final-message small {
+    color:
+        rgba(255,220,235,0.65) !important;
+
+    line-height: 1.6 !important;
+}
+
+
+/* ---------- ENDING ---------- */
+
+#finalRoom .final-ending {
+    margin-top: 42px !important;
+
+    padding-bottom: 15px !important;
+
+    color:
+        rgba(255,210,230,0.65) !important;
+}
+
+
+/* =========================================================
+   📱 MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    #finalRoom .final-content {
+        width:
+            calc(100% - 28px) !important;
+
+        padding:
+            22px 0 65px !important;
+    }
+
+
+    #finalRoom .back-button {
+        margin-bottom:
+            42px !important;
+    }
+
+
+    #finalRoom .world-eyebrow {
+        font-size:
+            10px !important;
+
+        letter-spacing:
+            3px !important;
+    }
+
+
+    #finalRoom .final-title {
+        max-width:
+            100% !important;
+
+        font-size:
+            clamp(48px, 15vw, 68px) !important;
+
+        line-height:
+            0.94 !important;
+
+        letter-spacing:
+            -2px !important;
+    }
+
+
+    #finalRoom .final-subtitle {
+        font-size:
+            14px !important;
+
+        line-height:
+            1.7 !important;
+
+        margin:
+            22px auto 32px !important;
+
+        max-width:
+            330px !important;
+    }
+
+
+    #finalRoom .final-video-frame {
+        width:
+            100% !important;
+
+        padding:
+            6px !important;
+
+        border-radius:
+            21px !important;
+    }
+
+
+    #finalRoom .final-birthday-video {
+        width:
+            100% !important;
+
+        max-height:
+            none !important;
+
+        border-radius:
+            15px !important;
+    }
+
+
+    #finalRoom .final-message {
+        width:
+            100% !important;
+
+        margin-top:
+            26px !important;
+
+        padding:
+            22px 18px !important;
+
+        border-radius:
+            20px !important;
+
+        backdrop-filter:
+            none !important;
+
+        -webkit-backdrop-filter:
+            none !important;
+    }
+
+
+    #finalRoom .final-message p {
+        font-size:
+            16px !important;
+    }
+
+
+    #finalRoom .final-message small {
+        font-size:
+            12px !important;
+    }
+
+
+    #finalRoom .final-ending {
+        margin-top:
+            35px !important;
+
+        font-size:
+            10px !important;
+    }
+}
+
+
+/* =========================================================
+   📱 VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    #finalRoom .final-content {
+        width:
+            calc(100% - 22px) !important;
+    }
+
+
+    #finalRoom .final-title {
+        font-size:
+            47px !important;
+
+        letter-spacing:
+            -1.5px !important;
+    }
+
+
+    #finalRoom .final-subtitle {
+        font-size:
+            13px !important;
+    }
+}
